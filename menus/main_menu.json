@@ -1,19 +1,19 @@
 {
   "menu_name": "Main Menu",
-  "style":"style.json",
-    "title": "Main Menu",
+  "style": "style.json",
+  "title": "Main Menu",
   "columns": {
-    "count": 2,
+    "count": 3,
     "scrollable": false,
     "spacing": 50
   },
   "rows": {
-    "count": 2,
+    "count": 1,
     "scrollable": false,
     "spacing": 50
   },
   "items": [
-        {
+    {
       "name": "Start Game",
       "type": "button",
       "text_size": 10,
@@ -22,20 +22,11 @@
       }
     },
     {
-      "name": "Toggle",
-      "type": "toggle",
-      "text_size": 10,
-      "data_location": {
-        "file": "saved_data/input.json",
-        "key": "toggle"
-      }
-    },
-    {
-      "name": "Input",
+      "name": "Settings",
       "type": "button",
       "text_size": 10,
       "function": {
-        "next_menu": "input"
+        "next_menu": "settings_menu"
       }
     },
     {

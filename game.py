@@ -12,6 +12,7 @@ class Game:
                 if event.key == pygame.K_ESCAPE:  # Check if Escape key is pressed
                     self.menu()  # Open the menu
 
+
     def draw(self, screen):
         pass
 

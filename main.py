@@ -49,7 +49,7 @@ if __name__ == "__main__":
             manager.update(events)
             manager.draw(screen)
         else:
-            manager.current_menu = "in_game_exit_confirm"
+            manager.current_menu = "in_game_menu"
             game.update(events)
             game.draw(screen)
 

@@ -1,7 +1,7 @@
 {
-  "menu_name": "Input Menu",
+  "menu_name": "Game Menu",
   "style": "style.json",
-    "title": "What text needs to be input",
+  "title": "Pause Game",
   "columns": {
     "count": 1,
     "scrollable": false,
@@ -14,28 +14,27 @@
   },
   "items": [
     {
-      "name": "Input text here",
-      "type": "input",
-      "text_size": 10,
-      "data_location": {
-        "file": "saved_data/input.json",
-        "key": "input_menu"
-      }
-    },
-    {
-      "name": "Return",
+      "name": "Resume",
       "type": "button",
       "text_size": 10,
       "function": {
-        "name": "return"
+        "name": "game"
       }
     },
     {
-      "name": "Save",
+      "name": "Main Menu",
       "type": "button",
       "text_size": 10,
       "function": {
-        "name": "save"
+        "next_menu": "in_game_main_menu_confirm"
+      }
+    },
+    {
+      "name": "Quit",
+      "type": "button",
+      "text_size": 10,
+      "function": {
+        "next_menu": "in_game_exit_confirm"
       }
     }
   ]

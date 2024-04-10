@@ -1,7 +1,7 @@
 {
   "menu_name": "Exit Confirm",
   "style": "style.json",
-  "title": "Exit to windows?",
+  "title": "Return to the main menu?",
   "columns": {
     "count": 1,
     "scrollable": false,
@@ -18,7 +18,7 @@
       "type": "button",
       "text_size": 10,
       "function": {
-        "name": "exit"
+        "next_menu": "main_menu"
       }
     },
     {
