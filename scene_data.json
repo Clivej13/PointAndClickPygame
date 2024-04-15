@@ -1,0 +1,51 @@
+{
+  "test": {
+    "background1": "img/jack-uglow-falcon-01.jpg",
+    "objects": [
+      {
+        "name": "man",
+        "type": "intractable",
+        "x": 20,
+        "y": 30,
+        "width": 50,
+        "movement": {
+          "points": [
+            {
+              "x": 600,
+              "y": 30,
+              "speed": 10,
+              "image": "img/man.png",
+              "animation_speed": 20,
+              "cells": 6
+            },
+            {
+              "stationary": true,
+              "time": 2,
+              "image": "img/man_standing.png",
+              "animation_speed": 20,
+              "cells": 6
+            },
+            {
+              "x": 20,
+              "y": 30,
+              "speed": 20,
+              "image": "img/man.png",
+              "animation_speed": 20,
+              "cells": 6
+            }
+          ]
+        }
+      },
+      {
+        "name": "book",
+        "type": "intractable",
+        "x": 400,
+        "y": 400,
+        "width": 50,
+        "image": "img/man_standing.png",
+        "animation_speed": 20,
+        "cells": 6
+      }
+    ]
+  }
+}
