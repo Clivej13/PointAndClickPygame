@@ -96,15 +96,22 @@ class SpriteAnimation:
         if obj_data.get("repeat", False):
             pass
         else:
-            self.sprite_strip = pygame.image.load(self.image_path).convert_alpha()
-            original_width = self.sprite_strip.get_width() // self.cells
-            original_height = self.sprite_strip.get_height()
-            target_width = self.width  # Desired final width after reduction
+            try:
+                self.sprite_strip = pygame.image.load(self.image_path).convert_alpha()
+                original_width = self.sprite_strip.get_width() // self.cells
+                original_height = self.sprite_strip.get_height()
+                target_width = self.width  # Desired final width after reduction
 
-            relative_height = (original_height * target_width) / original_width
-            self.sprite_strip = pygame.transform.scale(self.sprite_strip, (self.width * self.cells, relative_height))
-            self.frame_width = self.sprite_strip.get_width() // self.cells
-            self.frame_height = self.sprite_strip.get_height()
+                relative_height = (original_height * target_width) / original_width
+                self.sprite_strip = pygame.transform.scale(self.sprite_strip, (self.width * self.cells, relative_height))
+                self.frame_width = self.sprite_strip.get_width() // self.cells
+                self.frame_height = self.sprite_strip.get_height()
+            except pygame.error as e:
+                print(f"Unable to load sprite image '{self.image_path}': {e}")
+                self.sprite_strip = None  # Handle this case in the draw method
+            except FileNotFoundError as e:
+                print(e)
+                self.sprite_strip = None  # Handle this case in the draw method
 
     def update(self):
         # Add sprite animation or any other update logic here
@@ -210,7 +217,7 @@ class Scene:
 
     def load_scene_data(self, scene_name):
         try:
-            with open("scene_data.json", "r") as file:
+            with open("scenes/scene_data.json", "r") as file:
                 data = json.load(file)
                 return data.get(scene_name)
         except FileNotFoundError:
