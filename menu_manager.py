@@ -214,7 +214,7 @@ class MenuManager:
 
     def write_current_game_state(self, key, value):
         try:
-            with open("current_game_state.json", "r+") as file:
+            with open("saved_data/current_game_state.json", "r+") as file:
                 data = json.load(file)
                 data[key] = value
                 file.seek(0)  # Move the file pointer to the beginning

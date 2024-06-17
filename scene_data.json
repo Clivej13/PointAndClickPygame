@@ -1,50 +1,81 @@
 {
-  "test": {
-    "background1": "img/jack-uglow-falcon-01.jpg",
-    "objects": [
-      {
-        "name": "man",
-        "type": "intractable",
-        "x": 20,
-        "y": 30,
-        "width": 50,
-        "movement": {
-          "points": [
-            {
-              "x": 600,
-              "y": 30,
-              "speed": 10,
-              "image": "img/man.png",
-              "animation_speed": 20,
-              "cells": 6
-            },
-            {
-              "stationary": true,
-              "time": 2,
-              "image": "img/man_standing.png",
-              "animation_speed": 20,
-              "cells": 6
-            },
-            {
-              "x": 20,
-              "y": 30,
-              "speed": 20,
-              "image": "img/man.png",
-              "animation_speed": 20,
-              "cells": 6
-            }
-          ]
+  "Castle": {
+    "player": {
+      "x": 0,
+      "y": 0,
+      "images": [
+        {
+          "name": "base",
+          "width": 50,
+          "image": "img/Man-standing.png",
+          "animation_speed": 5,
+          "cells": 1
+        },
+        {
+          "name": "down_movement",
+          "width": 50,
+          "image": "img/man-walking-sprite-sheet.png",
+          "animation_speed": 15,
+          "cells": 8
+        },
+        {
+          "name": "up_movement",
+          "width": 50,
+          "image": "img/man-walking-away-sprite-sheet.png",
+          "animation_speed": 15,
+          "cells": 8
         }
-      },
+      ]
+    },
+    "backgrounds": [
+      {
+        "name": "CountryRoad",
+        "type": "background",
+        "x": 0,
+        "y": 0,
+        "images": [
+          {
+            "name": "base",
+            "width": 800,
+            "image": "img/Castle.png",
+            "animation_speed": 0,
+            "cells": 1
+          }
+        ]
+      }
+    ],
+    "items": [
       {
         "name": "book",
         "type": "intractable",
         "x": 400,
         "y": 400,
-        "width": 50,
-        "image": "img/man_standing.png",
-        "animation_speed": 20,
-        "cells": 6
+        "images": [
+          {
+            "name": "base",
+            "width": 50,
+            "image": "img/book.jpg",
+            "animation_speed": 0,
+            "cells": 1
+          }
+        ]
+      }
+    ],
+    "npcs": [
+      {
+        "name": "man",
+        "type": "intractable",
+        "x": 20,
+        "y": 30,
+        "images": [
+          {
+            "name": "base",
+            "width": 50,
+            "image": "img/man.png",
+            "animation_speed": 10,
+            "cells": 6
+          }
+        ]
       }
     ]
   }
